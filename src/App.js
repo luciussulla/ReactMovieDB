@@ -10,9 +10,12 @@ function App() {
   const {title} = useContext(AppContext)
   
   return (
-      <div className="App">
-        <p>{title}</p>
-      </div>
+    <Switch>
+      <Route path='/' exact>
+        <Home/>
+      </Route>
+      <Route path='/movies/:id' children={<Movie/>}/>
+    </Switch>
   )
 }
 

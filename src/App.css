@@ -6,10 +6,13 @@
 }
 
 :root {
-  --primary-clr: salmon; 
-  --bgc-clr: #fff; 
-  --secondary-clr: #383838; 
+  --primary-clr: rgb(38, 40, 58); 
+  --bgc-clr: rgb(128, 128, 128); 
+  --secondary-clr: #dbe6ff; 
 }
 
-
+body {
+  background-color: var(--bgc-clr);
+  color: var(--primary-clr);
+}
 
