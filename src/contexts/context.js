@@ -9,8 +9,39 @@ const AppProvider = ({children})=> {
   const [movies, setMovies] = useState([])
   const [query, setQuery] = useState('batman')
 
+  const fetchMovies = async (url)=> {
+    setIsLoading(true)
+    try {
+      const res = await fetch(url)
+      const data = await res.json()
+      if(data.Response === 'True') {
+        setMovies(data.Search)
+        setError({show:false, msg: ''})
+      } else {
+        setError({show:true, msg: data.Error})
+      }
+      console.log(data)
+      setIsLoading(false)
+      
+    } catch(e) {
+      console.log(e)
+    }
+  }
+
+  useEffect(()=> {
+    fetchMovies(`${API_ENDPOINT}&s=${query}`)
+  },[query])
+
   return (
-    <AppContext.Provider value={{title: "Dark"}}>
+    <AppContext.Provider value={
+      {
+        isLoading, 
+        error,
+        movies,
+        query, 
+        setQuery,
+      } 
+      }>
       {children}
     </AppContext.Provider>
   )
