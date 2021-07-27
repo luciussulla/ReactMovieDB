@@ -23,6 +23,12 @@ body {
   letter-spacing: .2rem;
   background-color: lightblue;
   color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+}
+
+.btn:hover {
+  background-color: rgb(72, 148, 173);
 }
 
 .loading {
@@ -110,14 +116,44 @@ body {
   border:2px solid rgb(38, 40, 58);
   outline:transparent;
 }
-
 .search-form h2 {
   margin-bottom: 25px; 
 }
-
 .error {
   padding: 10px 0px; 
   color: red; 
 }
 /* Single movie*/ 
-
+.clearfix::after {
+  display:table; 
+  content: ""; 
+  clear:both; 
+}
+.single-movie {
+  width: 70%; 
+  min-width: 700px; 
+  margin: 0 auto; 
+  margin-top: 50px; 
+  /* border: 1px solid blue;  */
+}
+.single-movie img {
+  width: 40%; 
+  min-width: 240px; 
+  float: left; 
+}
+.single-movie-info {
+  margin: 30px 30px; 
+  width: 40%; 
+  float: left; 
+  /* border: 1px solid red;  */
+}
+.single-movie-info h2{
+  margin: 20px 0px; 
+}
+.single-movie-info p{
+  margin: 10px 0px; 
+  line-height:1.3; 
+}
+.single-movie-info h4 {
+  margin: 20px 0px 40px; 
+}

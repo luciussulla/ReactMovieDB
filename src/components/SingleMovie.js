@@ -38,10 +38,21 @@ export default function SingleMovie() {
     </div>
   }
   // con destrucutr since this is after loading 
-  
-  return (
-    <div>
+  const {Poster:poster, Title:title, Plot: plot, Year:year} = movie
+
+   return (
+    <section className="single-movie clearfix" >
+      <img src={poster} alt="title"/>
+      <div className="single-movie-info">
+        <h2>{title}</h2>
+        <p>{plot}</p>
+        <h4>{year}</h4>
+        <Link to='/' className="btn">
+        back to movies
+        </Link>
+      </div>
       
-    </div>
+    </section>
+
   )
 }
