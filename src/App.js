@@ -6,6 +6,8 @@ import { AppContext } from './contexts/context';
 import Home from  './components/Home'
 import Movie from './components/SingleMovie'
 
+
+
 function App() {
   const {title} = useContext(AppContext)
   

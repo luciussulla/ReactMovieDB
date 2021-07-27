@@ -6,10 +6,13 @@ const url = 'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_avai
 export default function Movies() {
   const {isLoading, movies} = useContext(AppContext)
 
+  if(isLoading) {
+    return <div className="loading">Loading</div>
+  }
   return (
     <section className="movies-wrapper">
       {movies.map(movie=> {
-        const {imdbId:id, Poster: poster, Title: title, Year:year, Type:type} = movie
+        const {imdbID:id, Poster: poster, Title: title, Year:year, Type:type} = movie
           
           return <Link key={id} to={`movies/${id}`} className="react-link">
             <article className="movie">

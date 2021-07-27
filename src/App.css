@@ -16,6 +16,26 @@ body {
   color: var(--primary-clr);
 }
 
+.btn {
+  outline: transparent; 
+  border: 0px; 
+  padding: 8px; 
+  letter-spacing: .2rem;
+  background-color: lightblue;
+  color: white; 
+}
+
+.loading {
+  padding: 20px; 
+  text-align: center; 
+  font-size: 1.2rem;
+}
+.page-error {
+  text-align: center;
+  margin: 0 auto; 
+  color: red; 
+}
+
 .home-component {
   margin: 40px auto 0px; 
   width: 80%;
